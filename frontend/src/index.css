@@ -1,0 +1,14 @@
+
+@import "tailwindcss";
+
+html{
+    overflow-x: hidden;
+}
+
+#terms-page{
+    background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
