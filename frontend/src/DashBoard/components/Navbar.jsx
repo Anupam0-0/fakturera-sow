@@ -6,7 +6,7 @@ const englandFlag = "https://storage.123fakturere.no/public/flags/GB.png"
 
 const Navbar = () => {
     return (
-        <nav className=' bg-[#0f7ee8] '>
+        <nav className=' bg-primary '>
             <div className=' text-white max-w-[85rem] mx-auto h-20 px-8 flex justify-between items-center'>
                 <div className='hidden lg:block relative top-1'><Profile /></div>
                 <div><Menu size={40} color='#eee' className='block lg:hidden' /></div>

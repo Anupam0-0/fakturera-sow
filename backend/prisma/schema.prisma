@@ -14,11 +14,23 @@ model TranslationKey {
 }
 
 model Translation {
-  id              Int             @id @default(autoincrement())
-  keyId           Int
-  languageCode    String
-  text            String
+  id           Int    @id @default(autoincrement())
+  keyId        Int
+  languageCode String
+  text         String
 
-  translationKey  TranslationKey @relation(fields: [keyId], references: [id])
+  translationKey TranslationKey @relation(fields: [keyId], references: [id])
+
   @@unique([keyId, languageCode])
+}
+
+model Product {
+  id          Int    @id @default(autoincrement())
+  articleNo   String @unique 
+  product     String 
+  inPrice     Int     
+  price       Int
+  unit        String
+  inStock     Int     @default(0)
+  description String
 }
