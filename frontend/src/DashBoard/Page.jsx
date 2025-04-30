@@ -7,12 +7,12 @@ const Page = () => {
   return (
     <div className='w-[100vw]'>
       <Navbar />
-      <main className='grid grid-cols-8 w-full'>
-        <div className='col-span-2 shadow-2xl' >
+      <main className='grid grid-cols-10 w-full'>
+        <div className='col-span-2 shadow-xl/12 hidden lg:block' >
           <Sidebar />
         </div>
-        <div>
-          <Content className='col-span-2' />
+        <div className='col-span-8'>
+          <Content  />
         </div>
 
       </main>
