@@ -8,7 +8,7 @@ import Home from './Home';
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home/>} />
       <Route path="/terms" element={<TermsPage />} />
       <Route path="/dashboard" element={<DashboardPage />} />
       <Route path="*" element={<PageNotFound />} />

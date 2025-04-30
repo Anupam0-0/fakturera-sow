@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../../lib/axios'; // Adjust the import path as necessary
+
 import { CirclePlus, Printer, ToggleRight, Ellipsis } from 'lucide-react'
 
 const inputs = [
@@ -13,10 +14,6 @@ const Buttons = [
   { id: 3, logo: <ToggleRight color='#444' />, name: 'Advanced mode' },
 ]
 
-const api = axios.create({
-  baseURL: import.meta.env.MODE === "development" ? 'http://localhost:4000/api' : '/api',
-})
-
 const Content = () => {
   const [products, setProducts] = useState('');
 
@@ -26,7 +23,7 @@ const Content = () => {
       try {
         const res = await api.get('/products');
         setProducts(res.data);
-        console.log(res.data);
+        // console.log(res.data);
       } catch (error) {
         console.error('Error fetching products:', error);
       }

@@ -15,7 +15,7 @@ app.use(
 );
 
 // Fetch all translations for a given language
-app.get("/:lang/terms", Translator);
+app.get("/api/:lang/terms", Translator);
 app.get("/api/products", getAllProducts);
 app.put("/api/products/:id", updateProductById);
 

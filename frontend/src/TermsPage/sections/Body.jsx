@@ -7,7 +7,7 @@ const Body = () => {
   const { t } = useTranslation()
 
   return (
-    <div className='flex min-h-[calc(100vh-7rem)] flex-col items-center'>
+    <div className='flex min-h-[calc(100vh-8rem)] flex-col items-center'>
       <h1 className='text-3xl text-white font-bold tracking-wide'>{t("terms")}</h1>
       <GreenButton text={t("button.cancel")} />
       <Terms />

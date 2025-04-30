@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../lib/axios'; // Adjust the import based on your project structure
 
 const TranslationContext = createContext();
 
@@ -8,7 +8,7 @@ export const TranslationProvider = ({ children }) => {
   const [translations, setTranslations] = useState({});
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/${lang}/terms`)
+    api.get(`/${lang}/terms`)
       .then(res => setTranslations(res.data))
       .catch(err => console.error('Translation fetch error:', err));
   }, [lang]);
