@@ -16,15 +16,36 @@ const getAllProducts = async (req, res) => {
 const updateProductById = async (req, res) => {
   try {
     const { id } = req.params;
+    const {
+      articleNo,
+      product,
+      inPrice,
+      price,
+      unit,
+      inStock,
+      description,
+    } = req.body;
+
     const updated = await prisma.product.update({
       where: { id: parseInt(id) },
-      data: req.body,
+      data: {
+        articleNo: parseInt(articleNo),
+        product: product,
+        inPrice: parseInt(inPrice),
+        price: parseInt(price),
+        unit: unit,
+        inStock: parseInt(inStock),
+        description: description,
+      },
     });
+
     res.json(updated);
+
   } catch (error) {
-    console.error("Error fetching product by ID:", error);
+    console.error("Error updating product by ID:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 };
 
 module.exports = { getAllProducts, updateProductById };
+

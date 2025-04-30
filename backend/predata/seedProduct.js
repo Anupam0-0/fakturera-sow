@@ -5,7 +5,7 @@ async function main() {
   for (let i = 1; i <= 25; i++) {
     await prisma.product.create({
       data: {
-        articleNo: `ART${i}`,
+        articleNo: i,
         product: `Test Product ${i}`,
         inPrice: 750 + i,
         price: 1000 + i,

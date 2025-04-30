@@ -14,7 +14,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model TranslationKey {
   id           Int           @id @default(autoincrement())
   key          String        @unique
@@ -34,11 +33,11 @@ model Translation {
 
 model Product {
   id          Int    @id @default(autoincrement())
-  articleNo   Int @unique 
-  product     String 
-  inPrice     Int     
+  articleNo   Int    @unique
+  product     String
+  inPrice     Int
   price       Int
   unit        String
-  inStock     Int     @default(0)
+  inStock     Int    @default(0)
   description String
 }
