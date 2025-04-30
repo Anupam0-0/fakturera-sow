@@ -6,7 +6,7 @@ const page = () => {
       <h1 className='text-4xl font-semibold'>Looks like you have been Lost !</h1>
       <h2 className='text-2xl'>Available Page</h2>
       <ul>
-        <li>1. <a href="/terms" className='text-blue-700 underline'>Home</a></li>
+        <li>1. <a href="/terms" className='text-blue-700 underline'>Terms</a></li>
         <li>2. <a href="/dashboard" className='text-blue-700 underline'>Dashboard</a></li>
       </ul>
     </div>

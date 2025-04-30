@@ -19,11 +19,11 @@ const SideMenu = [
 
 const sidebar = () => {
   return (
-    <div className='h-[calc(100vh-5.5rem)] overflow-y-auto px-6 py-1 text-black/70'>
+    <div className='h-[calc(100vh-5.5rem)] overflow-y-auto px-2 xl:px-4 py-1 text-black/70'>
       <div className='flex justify-center items-center border-b-2 mx-2 border-blue-300 mb-4 text-xl py-2 sticky top-0 bg-white opacity-100' > <h2>Menu</h2></div>
       {
         SideMenu.map((item, id) => <div key={id} 
-           className='w-full py-2 px-5 rounded flex gap-4 hover:bg-neutral-200/50 cursor-pointer transition-all duration-200 ease-in-out'>
+           className='w-full py-2 px-2 xl:px-4 rounded flex gap-4 hover:bg-neutral-200/50 cursor-pointer transition-all duration-200 ease-in-out'>
             {item.logo}
             {item.name}
            </div>
