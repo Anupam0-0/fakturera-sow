@@ -73,7 +73,7 @@ const Content = () => {
               <th className='px-4 font-semibold py-4 hidden md:table-cell'>In Price</th>
               <th className='px-4 font-semibold py-4 hidden lg:table-cell'>Unit</th>
               <th className='px-4 font-semibold py-4 hidden xl:table-cell'>In Stock</th>
-              <th className='px-4 font-semibold py-4 hidden xl:table-cell'>Description</th>
+              <th className='px-4 font-semibold py-4 hidden 2xl:table-cell'>Description</th>
               <th className='px-4 font-semibold py-4 hidden xl:table-cell'></th>
             </tr>
           </thead>
@@ -139,7 +139,7 @@ const Content = () => {
                       className='w-full text-center text-sm py-1 my-1 px-3 rounded-xl border border-blue-500/50 outline-blue-500'
                     />
                   </td>
-                  <td className='w-full px-2 hidden xl:table-cell'>
+                  <td className='w-full px-2 hidden 2xl:table-cell'>
                     <input
                       type='text'
                       value={p.description || ''}

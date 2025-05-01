@@ -12,7 +12,7 @@ const Home = () => {
     }, []);
 
   return (
-    <div className='p-6 text-xl'>This is Home Page. You will soon be redirected to /<a className='text-blue-600 underline'>terms</a> page </div>
+    <div className='p-6 text-xl'>This is Home Page. You will soon be redirected to /<a className='text-blue-500 cursor-pointer underline'>terms</a> page </div>
   )
 }
 
