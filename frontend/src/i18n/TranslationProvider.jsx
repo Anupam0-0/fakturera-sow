@@ -12,7 +12,7 @@ export const TranslationProvider = ({ children }) => {
       // console.log('Fetching translations for language:', lang);
       try {
         const res = await api.get(`/${lang}/terms`);
-        // console.log('Fetched translations:', res.data);
+        console.log('Fetched translations:', res.data);
         setTranslations(res.data);
       } catch (err) {
         console.error('Translation fetch error:', err);

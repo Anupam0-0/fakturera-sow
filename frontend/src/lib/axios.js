@@ -11,7 +11,7 @@ try {
       "Access-Control-Allow-Origin": "*",
     }
   });
-  // console.log("Axios instance created successfully.");
+  console.log("Axios instance created successfully.");
 } catch (error) {
   console.error("Error creating Axios instance:", error);
 }
