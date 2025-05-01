@@ -8,5 +8,14 @@ export default defineConfig({
     outDir: 'dist',
   },
   base: '/',
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://fakturera-sow-1.onrender.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
+      },
+    },
+  }
 });
 

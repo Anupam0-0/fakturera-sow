@@ -6,10 +6,12 @@ let api;
 
 try {
   api = axios.create({
-    baseURL: import.meta.env.MODE !== "development"
-      ? "http://localhost:4000/api"
-      : "https://fakturera-sow-1.onrender.com/api"
-      // : `${import.meta.env.SERVER_URL}/api`,
+    baseURL: "https://fakturera-sow-1.onrender.com/api",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    }
   });
   console.log("Axios instance created successfully.");
 } catch (error) {

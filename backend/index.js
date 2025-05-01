@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 //using just to avoid any issue for now
-app.use(cors({ origin: '*' })); 
+app.use(cors({ origin: '*',  })); 
 
 
 // API routes
