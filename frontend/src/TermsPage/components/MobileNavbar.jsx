@@ -13,7 +13,7 @@ const MobileNavbar = () => {
     ]
 
     return (
-        <div className='font-medium text-[1.1rem] text-black/90 min-w-[20rem] h-full'>
+        <div className='font-medium block xl:hidden text-[1.1rem] text-black/90 w-[15rem] sm:w-60rem h-full'>
             <div className='flex flex-col shadow-xl'>
                 {navLinks.map((link, index) => (
                     <a key={index} href={link.href} className='py-5 px-9 bg-white  hover:bg-blue-300'>

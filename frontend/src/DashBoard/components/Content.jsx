@@ -45,10 +45,10 @@ const Content = () => {
 
   return (
     <div className='h-[calc(100vh-5.5rem)] w-full px-2 lg:px-4 overflow-auto relative'>
-      <nav className='flex flex-col lg:flex-row gap-4 sticky top-0.5 z-10 border-b px-4 lg:px-10 border-black/8 py-3 pb-4 bg-white opacity-100 justify-between items-start '>
+      <nav className='flex flex-col lg:flex-row gap-4 sticky top-[0.1rem] z-10 border-b px-4 lg:px-10 border-black/8 py-3 pb-4 bg-white opacity-100 justify-between items-start '>
         <div className='flex flex-col gap-2.5 mx-auto lg:mx-0'>
           {
-            inputs.map((item, id) => <input key={id} type={item.type} placeholder={item.placeholder} className='min-w-[300px] w-[85dvw] lg:max-w-[300px] text-black/80 text-sm px-4 py-1 rounded-2xl border shadow-xs border-neutral-200 focus:border-neutral-400/80 outline-none' />)
+            inputs.map((item, id) => <input key={id} type={item.type} placeholder={item.placeholder} className='w-[85dvw] lg:max-w-[300px] text-black/80 text-sm px-4 py-1 rounded-2xl border shadow-xs border-neutral-200 focus:border-neutral-400/80 outline-none' />)
           }
         </div>
 
@@ -65,7 +65,7 @@ const Content = () => {
 
       <div className='px-2 md:px-4'>
         <table className='table-auto w-full border-collapse mx-auto rounded-2xl relative'>
-          <thead className='sticky top-24.5 bg-white opacity-100'>
+          <thead className='sticky top-[6.1rem] bg-white opacity-100'>
             <tr className=''>
               <th className='px-4 font-semibold py-4 hidden xl:table-cell'>Article No</th>
               <th className='px-4 font-semibold py-4'>Product/Service</th>
@@ -80,7 +80,7 @@ const Content = () => {
           <tbody className=''>
             {products.length === 0 ? (
               <tr>
-                <td colSpan={4} className='text-center text-2xl p-5 text-black/70 font-semibold '>Loading Products ...</td>
+                <td colSpan={4} className='text-center text-2xl py-5 px-5 text-black/70 font-semibold '>Loading Products ...</td>
               </tr>
             ) : (
               products.map(p => (
@@ -94,7 +94,7 @@ const Content = () => {
                       className='w-full text-center text-sm py-1 my-1 px-3 rounded-xl border border-blue-500/50 outline-blue-500'
                     />
                   </td>
-                  <td className='min-w-45 px-2 '>
+                  <td className='min-w-35 sm:min-w-45 px-2 '>
                     <input
                       type='text'
                       value={p.product || ''}
@@ -103,7 +103,7 @@ const Content = () => {
                       className='w-full text-center text-sm py-1 my-1  px-3 rounded-xl border border-blue-500/50 outline-blue-500'
                     />
                   </td>
-                  <td className='min-w-30 px-2 '>
+                  <td className='min-w-25 sm:min-w-30 px-2 '>
                     <input
                       type='number'
                       value={p.inPrice || ''}
