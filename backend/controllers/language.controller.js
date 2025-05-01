@@ -2,7 +2,7 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-const Translator = async (req, res) => {
+const translator = async (req, res) => {
   try {
     const { lang } = req.params;
 
@@ -24,4 +24,4 @@ const Translator = async (req, res) => {
 };
 
 
-module.exports = { Translator };
+module.exports = { translator };
