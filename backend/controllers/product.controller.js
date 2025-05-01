@@ -2,7 +2,6 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 
-
 const getAllProducts = async (req, res) => {
   try {
     const products = (await prisma.product.findMany()).sort((a, b) => a.id - b.id);

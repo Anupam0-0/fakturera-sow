@@ -1,0 +1,22 @@
+{
+  "name": "fakturera-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anupam0-0/fakturera-sow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Anupam0-0/fakturera-sow/issues"
+  },
+  "homepage": "https://github.com/Anupam0-0/fakturera-sow#readme"
+}
