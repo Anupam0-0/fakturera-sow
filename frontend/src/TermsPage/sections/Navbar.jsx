@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className='flex items-center gap-4 relative '>
         <img src={DiamondLogo} alt="logo" className='w-15 object-cover hidden xl:block' />
         <button onClick={() => setIsOpen(!isOpen)} className='block xl:hidden cursor-pointer p-3'><Menu color='white' size={32} strokeWidth={2.2} /></button>
-        <div className={`absolute inset-0 left-2 w-20 ${isOpen ? "h-full top-20 " : "h-0 top-20 -z-50"} transition-all ease-in-out duration-2000 `}>
+        <div className={`absolute inset-0 left-2 w-20 ${isOpen ? "h-full top-20 " : "h-0 hidden top-20 -z-50"} transition-all ease-in-out duration-2000 `}>
           <MobileNavbar/>
         </div>
       </div>
