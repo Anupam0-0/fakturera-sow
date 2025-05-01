@@ -10,12 +10,9 @@ const PORT = process.env.PORT || 4000;
 const app = express();
 app.use(express.json());
 
-// CORS configuration
-app.use(
-  cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173", // Use environment variable for flexibility
-  })
-);
+//using just to avoid any issue for now
+app.use(cors()); 
+
 
 // API routes
 app.get('/', (req, res) => {

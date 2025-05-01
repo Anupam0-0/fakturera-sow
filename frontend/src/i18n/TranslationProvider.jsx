@@ -8,9 +8,16 @@ export const TranslationProvider = ({ children }) => {
   const [translations, setTranslations] = useState({});
 
   useEffect(() => {
-    api.get(`/${lang}/terms`)
-      .then(res => setTranslations(res.data))
-      .catch(err => console.error('Translation fetch error:', err));
+    const fetchTranslations = async () => {
+      try {
+        const res = await api.get(`/${lang}/terms`);
+        setTranslations(res.data);
+      } catch (err) {
+        console.error('Translation fetch error:', err);
+      }
+    };
+
+    fetchTranslations();
   }, [lang]);
 
   const t = (key) => translations[key] || '';
